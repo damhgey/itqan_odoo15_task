@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+         <template id="report_product_points">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.external_layout">
+                        <div class="page">
+                            <h4 class="text-center">
+                                <strong class="text-primary">Product Points: </strong>
+                                <span class="text-secondary" t-field="o.display_name"/>
+                            </h4>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <div class="row">
+                                <div class="col-7 ml-5">
+                                    <strong size="7" class="text-primary">Product: </strong>
+                                    <span class="text-secondary" t-field="o.product_id.display_name"/>
+                                    <br/>
+                                    <br/>
+                                    <strong class="text-primary" size="4">Points: </strong>
+                                    <span class="text-secondary" t-field="o.points"/>
+                                    <br/>
+                                    <br/>
+                                    <strong class="text-primary" size="4">Last Change Status By: </strong>
+                                    <span class="text-secondary" t-field="o.write_state_uid"/>
+                                </div>
+                                <div class="col-5">
+                                    <strong class="text-primary" size="4">Status: </strong>
+                                    <span class="text-secondary" t-field="o.state"/>
+                                    <br/>
+                                    <br/>
+                                    <strong class="text-primary" size="4">Start Date: </strong>
+                                    <span class="text-secondary" t-field="o.start_date"/>
+                                    <br/>
+                                    <br/>
+                                    <strong class="text-primary" size="4">End Date: </strong>
+                                    <span class="text-secondary" t-field="o.end_date"/>
+                                </div>
+                            </div>
+                            <br/>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>
+
